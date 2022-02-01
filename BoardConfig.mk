@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/rmx2020
+DEVICE_PATH := device/realme/RMX2151
 
 # Build
 ALLOW_MISSING_DEPENDENCIES := true
@@ -39,7 +39,7 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := oppo6769
+TARGET_BOOTLOADER_BOARD_NAME := oppo6785
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
