@@ -157,13 +157,13 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
-TW_NO_SCREEN_BLANK := true
-TW_SCREEN_BLANK_ON_BOOT := false
+#TW_NO_SCREEN_BLANK := true
+TW_SCREEN_BLANK_ON_BOOT := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_OZIP_DECRYPT_KEY := 0000
 TW_INCLUDE_LOGICAL := my_product my_engineering my_company my_carrier my_region my_heytap my_stock my_preload my_manifest
-TW_NO_HAPTICS := true
+#TW_NO_HAPTICS := true
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 
 # resetprop and magiskboot
@@ -176,8 +176,10 @@ TARGET_USES_LOGD := true
 
 # PBRP Build Flags
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
-
-PB_TORCH_PATH := "/sys/class/leds/flash-light"
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
 PB_TORCH_MAX_BRIGHTNESS := 1
 
+
+# Hack: prevent anti rollback
 PLATFORM_VERSION := 16.1.0
+PLATFORM_SECURITY_PATCH := 2099-12-31
