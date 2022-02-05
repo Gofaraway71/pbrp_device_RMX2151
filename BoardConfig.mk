@@ -163,7 +163,8 @@ TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_OZIP_DECRYPT_KEY := 0000
 TW_INCLUDE_LOGICAL := my_product my_engineering my_company my_carrier my_region my_heytap my_stock my_preload my_manifest
-TW_NO_HAPTICS := true
+TW_NO_HAPTICS := false
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
 
 # resetprop and magiskboot
 TW_INCLUDE_RESETPROP := true
@@ -176,6 +177,5 @@ TARGET_USES_LOGD := true
 # PBRP Build Flags
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
 
-#PB Torch
-PB_TORCH_PATH := "/proc/qcom_flash"
+PB_TORCH_PATH := "/sys/class/leds/flash-light"
 PB_TORCH_MAX_BRIGHTNESS := 1
