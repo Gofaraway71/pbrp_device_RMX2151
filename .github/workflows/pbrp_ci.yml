@@ -84,3 +84,9 @@ jobs:
           Target: ${{ github.event.inputs.BUILD_TARGET }}.img
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Release Builds 
+      run: |
+          sudo apt-get update && sudo apt-get install sshpass -y
+          cd $BuildPath 
+          bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}
