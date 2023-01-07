@@ -66,12 +66,14 @@ jobs:
         repo sync
         git clone $DT_LINK --depth=1 --single-branch $DT_PATH
 
-    - name: Build
+    - name: Build 
       run: |
         cd work && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch omni_$DEVICE-eng && make pbrp
 
     - name: Release Builds 
-         run: |
-              sudo apt-get update && sudo apt-get install sshpass -y
-              cd $BuildPath 
-              bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}
+      run: |
+        sudo apt-get update && sudo apt-get install sshpass -y
+        cd $BuildPath 
+        bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}
+
+
