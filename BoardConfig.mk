@@ -1,4 +1,4 @@
-#
+
 # Copyright (C) 2019 Potato Open Sauce Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +18,8 @@ DEVICE_PATH := device/realme/RMX2151
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true#
 
 # Architecture
 TARGET_ARCH := arm64
@@ -40,7 +42,10 @@ TARGET_USES_UEFI := true
 # Platform
 TARGET_BOARD_PLATFORM := mt6785
 
-# Kernel
+# Kernel# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user buildvariant=eng
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x40078000
