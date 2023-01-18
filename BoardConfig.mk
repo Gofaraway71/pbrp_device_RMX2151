@@ -46,7 +46,7 @@ TARGET_BOARD_PLATFORM := mt6785
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user buildvariant=eng
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user buildvariant=eng androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -115,7 +115,7 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Crypto
 PLATFORM_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 20.1.0
+PLATFORM_VERSION := 99.87.36
 VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
@@ -140,11 +140,12 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_NO_SCREEN_BLANK := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
-TW_INCLUDE_LOGICAL := oppo_product oppo_engineering preload_common
+TW_INCLUDE_LOGICAL := my_product my_engineering my_company my_carrier my_region my_heytap my_stock my_preload my_manifest
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 TW_OZIP_DECRYPT_KEY := 0000
 TW_Y_OFFSET := 115
