@@ -19,8 +19,10 @@
 
 DEVICE_PATH := device/realme/RMX2151
 
-# Build
+# For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -170,5 +172,3 @@ TARGET_USES_LOGD := true
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
 PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
 PB_TORCH_MAX_BRIGHTNESS := 1
-PLATFORM_VERSION := 16.1.0
-PLATFORM_SECURITY_PATCH := 2099-12-31
