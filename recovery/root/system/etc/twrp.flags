@@ -1,4 +1,3 @@
-
 # Block device partitions
 /metadata		ext4	/dev/block/by-name/md_udc
 /data			ext4	/dev/block/by-name/userdata		flags=display="internal";fileencryption=aes-256-xts:aes-256-cts:v1
@@ -10,8 +9,7 @@
 /vbmeta_system		emmc	/dev/block/by-name/vbmeta_system	flags=display="VBMeta (System)"
 /vbmeta_vendor		emmc	/dev/block/by-name/vbmeta_vendor	flags=display="VBMeta (Vendor)"
 /misc			emmc	/dev/block/by-name/misc
-/dev/block/sda        flags=display="USB Storage";storage;wipeingui;removable
-/persist		    ext4	  /dev/block/platform/bootdevice/by-name/persist		flags=display="Persist";backup=1;mounttodecrypt
 
-/external_sd		auto	  /dev/block/mmcblk0p1	/dev/block/mmcblk0		flags=display="External SDcard";storage;wipeingui;removable;backup=0
-/usbotg			    auto    /dev/block/sdd1		/dev/block/sdd			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
+# External storages
+/external_sd		auto	/dev/block/mmcblk0p1			flags=display="External SD card";storage;wipeingui;removable;backup=0
+/usb-otg                auto    /dev/block/sda1              /dev/block/sda        flags=display="USB Storage";storage;wipeingui;removable
